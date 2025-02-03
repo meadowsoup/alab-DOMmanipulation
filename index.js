@@ -43,3 +43,6 @@ menuLinks.forEach(link => { // set new elements content value of the text proper
      linkEl.textContent = link.text
      topMenuEl2.appendChild(linkEl) // append new element to other
 });
+
+//! PART 2
+
