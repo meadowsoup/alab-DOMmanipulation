@@ -1,6 +1,6 @@
-//! PART 1
+//! DOM MANIPULATION
 
-//todo: Getting Started
+//todo: Getting Started 
 
 // select and cache the <main> element in a variable
 const mainEl = document.querySelector("main");
@@ -12,7 +12,7 @@ mainEl.innerHTML = "<h1>DOM Manipulation</h1>";
 mainEl.classList.add("flex-ctr");
 
 
-//todo: Creating a Menu Bar
+//todo: Creating a Menu Bar & Creating the Submenu
 
 // select and cache the <nav id> element in another variable
 const topMenuEl = document.getElementById("top-menu");
@@ -24,7 +24,7 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 topMenuEl.classList.add("flex-around");
 
 
-//todo: Adding Menu Buttons
+//todo: Adding Menu Buttons & Adding Menu Interaction
 
 // go through each element in the array and link each one with an object
 const menuLinks = [ // create <a> aka "anchor" element
@@ -48,18 +48,18 @@ menuLinks.forEach(link => { // set new elements content value of the text proper
 
 //todo: Creating the Submenu
 
-// select and store new element
-const subMenuEl = document.getElementById("sub-menu");
-// set 100% height
-subMenuEl.style.height = "100%";
-//using CSS custom property to set background color
-subMenuEl.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--sub-menu-bg");
-// add flex class to new variable
-subMenuEl.classList.add("flex-around");
-// setting new variable sub to absolute
-subMenuEl.style.position = "absolute";
-// setting top to 0
-subMenuEl.style.top = "0";
+// // select and store new element
+// const subMenuEl = document.getElementById("sub-menu");
+// // set 100% height
+// subMenuEl.style.height = "100%";
+// //using CSS custom property to set background color
+// subMenuEl.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--sub-menu-bg");
+// // add flex class to new variable
+// subMenuEl.classList.add("flex-around");
+// // setting new variable sub to absolute
+// subMenuEl.style.position = "absolute";
+// // setting top to 0
+// subMenuEl.style.top = "0";
 
 
 //todo: Adding Menu Interaction
@@ -77,22 +77,18 @@ subMenuEl.style.top = "0";
 // const topMenuLinks = newTopMenu.querySelectorAll("a");
 
 // add event listener
-newTopMenu.addEventListener("click", function(event) {
-     event.preventDefault(); // prevent default link action
-     if (!event.target.matches("a"))
-          return; // ignore click on non-links
-     const clickedLink = event.target; // store clicked link
-     console.log(clickedLink.textContent); // log the clicked link text
+// newTopMenu.addEventListener("click", function(event) {
+//      event.preventDefault(); // prevent default link action
+//      if (!event.target.matches("a"))
+//           return; // ignore click on non-links
+//      const clickedLink = event.target; // store clicked link
+//      console.log(clickedLink.textContent); // log the clicked link text
 
-     // remove "active" class from all links
-     menuLinks.forEach(link => link.classList.remove("active"));
+//      // remove "active" class from all links
+//      menuLinks.forEach(link => link.classList.remove("active"));
 
-     // toggle active class from links
-     if (!clickedLink.classList.contains("active")) {
-          clickedLink.classList.add("active");
-     }
-});
-
-
-//todo: Adding Submenu Interaction
-
+//      // toggle active class from links
+//      if (!clickedLink.classList.contains("active")) {
+//           clickedLink.classList.add("active");
+//      }
+// });
