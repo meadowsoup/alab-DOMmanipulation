@@ -23,6 +23,13 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 // add a flex around class
 topMenuEl.classList.add("flex-around");
 
+const subMenuEl = document.getElementById("sub-menu");
+
+subMenuEl.style.height = "100%";
+subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+subMenuEl.classList.add("flex-around");
+subMenuEl.style.position = "absolute";
+subMenuEl.style.top = "0";
 
 //todo: Adding Menu Buttons & Adding Menu Interaction
 
@@ -30,7 +37,9 @@ topMenuEl.classList.add("flex-around");
 const menuLinks = [ // create <a> aka "anchor" element
      // add href attribute to new element set to the href property of the linked object
      {text: "About", href: "/about"},
-     {text: "Catalog", href: "/catalog"},
+     {text: "Catalog", href: "#", subLinks: [
+          {text: "All", href: "/catalog/all"}
+     ]},
      {text: "Orders", href: "/orders"},
      {text: "Account", href: "/account"}
 ];
