@@ -46,3 +46,25 @@ menuLinks.forEach(link => { // set new elements content value of the text proper
 
 //! PART 2
 
+//todo: Creating the Submenu
+
+// select and store new element
+const subMenuEl = document.getElementById("sub-menu");
+
+// set 100% height
+subMenuEl.style.height = "100%";
+
+//using CSS custom property to set background color
+subMenuEl.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--sub-menu-bg");
+
+// add flex class to new variable
+subMenuEl.classList.add("flex-around");
+
+// setting new variable sub to absolute
+subMenuEl.style.position = "absolute";
+
+// setting top to 0
+subMenuEl.style.top = "0";
+
+
+//todo: Adding Menu Interaction
