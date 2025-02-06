@@ -38,10 +38,18 @@ const menuLinks = [ // create <a> aka "anchor" element
      // add href attribute to new element set to the href property of the linked object
      {text: "About", href: "/about"},
      {text: "Catalog", href: "#", subLinks: [
-          {text: "All", href: "/catalog/all"}
+          {text: "All", href: "/catalog/all"},
+          {text: "Top Selling", href: "/catalog/top"},
+          {text: "New Arrivals", href: "/catalog/new"}
      ]},
-     {text: "Orders", href: "/orders"},
-     {text: "Account", href: "/account"}
+     {text: "Orders", href: "#", subLinks: [
+          {text: "Pending", href: "/orders/pending"},
+          {text: "History", href: "/orders/history"}
+     ]},
+     {text: "Account", href: "#", subLinks: [
+          {text: "Profile", href: "/account/profile"},
+          {text: "Sign Out", href: "/account/signout"}
+     ]}
 ];
 
 const topMenuEl2 = document.getElementById('top-menu');
