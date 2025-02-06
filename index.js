@@ -73,8 +73,8 @@ subMenuEl.style.top = "0";
 // ];
 
 // select and store menu elements
-const newTopMenu = document.getElementById("top-menu");
-const topMenuLinks = newTopMenu.querySelectorAll("a");
+// const newTopMenu = document.getElementById("top-menu");
+// const topMenuLinks = newTopMenu.querySelectorAll("a");
 
 // add event listener
 newTopMenu.addEventListener("click", function(event) {
@@ -85,7 +85,7 @@ newTopMenu.addEventListener("click", function(event) {
      console.log(clickedLink.textContent); // log the clicked link text
 
      // remove "active" class from all links
-     topMenuLinks.forEach(link => link.classList.remove("active"));
+     menuLinks.forEach(link => link.classList.remove("active"));
 
      // toggle active class from links
      if (!clickedLink.classList.contains("active")) {
