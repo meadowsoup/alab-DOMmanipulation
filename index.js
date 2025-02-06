@@ -29,10 +29,10 @@ topMenuEl.classList.add("flex-around");
 // go through each element in the array and link each one with an object
 const menuLinks = [ // create <a> aka "anchor" element
      // add href attribute to new element set to the href property of the linked object
-     {text: "Home", href: "/"},
      {text: "About", href: "/about"},
-     {text: "Services", href: "/services"},
-     {text: "Contact", href: "/contact"}
+     {text: "Catalog", href: "/catalog"},
+     {text: "Orders", href: "/orders"},
+     {text: "Account", href: "/account"}
 ];
 
 const topMenuEl2 = document.getElementById('top-menu');
@@ -50,19 +50,14 @@ menuLinks.forEach(link => { // set new elements content value of the text proper
 
 // select and store new element
 const subMenuEl = document.getElementById("sub-menu");
-
 // set 100% height
 subMenuEl.style.height = "100%";
-
 //using CSS custom property to set background color
 subMenuEl.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--sub-menu-bg");
-
 // add flex class to new variable
 subMenuEl.classList.add("flex-around");
-
 // setting new variable sub to absolute
 subMenuEl.style.position = "absolute";
-
 // setting top to 0
 subMenuEl.style.top = "0";
 
@@ -70,12 +65,12 @@ subMenuEl.style.top = "0";
 //todo: Adding Menu Interaction
 
 // update array!
-const newMenuLinks = [
-     {text: "about", href: "/about"},
-     {text: "catalog", href: "/catalog"},
-     {text: "orders", href: "/orders"},
-     {text: "account", href: "/account"}
-];
+// const newMenuLinks = [
+//      {text: "about", href: "/about"},
+//      {text: "catalog", href: "/catalog"},
+//      {text: "orders", href: "/orders"},
+//      {text: "account", href: "/account"}
+// ];
 
 // select and store menu elements
 const newTopMenu = document.getElementById("top-menu");
